@@ -1,0 +1,19 @@
+server:
+  port: 8090
+  servlet:
+    context-path: /
+
+spring:
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+#          jwk-set-uri: https://cognito-idp.eu-central-1.amazonaws.com/eu-central-1_7s0YJek0R/.well-known/jwks.json
+          issuer-uri: https://cognito-idp.eu-central-1.amazonaws.com/eu-central-1_7s0YJek0R
+
+
+logging:
+  level:
+    org:
+      springframework:
+        security: TRACE
